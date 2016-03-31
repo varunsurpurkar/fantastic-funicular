@@ -1,0 +1,14 @@
+{
+  "name": "reviewBoard",
+  "homepage": "https://github.com/varunsurpurkar/fantastic-funicular",
+  "authors": [
+    "varunsurpurkar <varunsurpurkar@gmail.com>"
+  ],
+  "description": "Review board built from angular ks",
+  "main": "app.js",
+  "moduleType": [
+    "node"
+  ],
+  "license": "MIT",
+  "private": true
+}
