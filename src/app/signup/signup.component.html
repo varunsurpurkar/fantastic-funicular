@@ -1,0 +1,56 @@
+
+<section class="section text-center bg hero-bg electric-gradient dark-theme">
+
+<div class="container">
+        <div class="row centered-form">
+        <div class="col-md-6">
+        	<div class="card">
+        		<div class="card-header">
+			    		<h3>Please Register into Student forum  <small>It's free!</small></h3>
+			 			</div>
+			 			<div class="card-content">
+							 		<form  (ngSubmit)="createProfile()" #msgForm="ngForm">
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="text" [(ngModel)]="profileData.firstName" id="first_name" name='firstName' class="form-control input-sm" placeholder="First Name">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="text" [(ngModel)]="profileData.lastName" name='lastName' id="last_name" class="form-control input-sm" placeholder="Last Name">
+			    					</div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			                <input type="email" [(ngModel)]="profileData.userId" id="userId"  name = 'userId' class="form-control input-sm" placeholder="User ID(Email Gmail only)">
+			    					</div>
+			    				</div>
+			    			</div>
+
+			    			<div class="form-group">
+			    				<input type="text" [(ngModel)]="profileData.mobileNo" id="mobile" name='mobileNo' class="form-control input-sm" placeholder="Mobile No">
+			    			</div>
+
+			    			<div class="row">
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password"  id="password" [(ngModel)]="profileData.password" class="form-control input-sm" placeholder="Password">
+			    					</div>
+			    				</div>
+			    				<div class="col-xs-6 col-sm-6 col-md-6">
+			    					<div class="form-group">
+			    						<input type="password"  id="password_confirmation" class="form-control input-sm" placeholder="Confirm Password">
+			    					</div>
+			    				</div>
+			    			</div>
+			    			
+			    			<input type="submit" value="Register" class="btn btn-info btn-block">
+			    		
+			    		</form>
+			    	</div>
+	    		</div>
+    		</div>
+    	</div>
+	</div>
+	</section>

@@ -1,0 +1,119 @@
+<section class="bg hero-bg cloud-gradient dark-theme">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-body">
+         
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="control-label">User Name(Email address)</label>
+                  <div class="form-group form-black label-floating is-empty">
+                    <input type="email" class="form-control" [(ngModel)]="profileData.userId" name="userId" value="{{profileData.userId}}">
+                  </div>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6">
+                  <label class="control-label">Fist Name</label>
+                  <div class="form-group form-black label-floating is-empty">
+
+                    <input type="text" class="form-control" [(ngModel)]="profileData.firstName" name="firstName" value="{{profileData.firstName}}">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <label class="control-label">Last Name</label>
+                  <div class="form-group form-black label-floating is-empty">
+                    <input type="text" class="form-control" [(ngModel)]="profileData.lastName" name="lastName" value="{{profileData.lastName}}">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                    <div class="col-md-6">
+                            <button type="submit" class="btn btn-danger pull-right" (click)="searchProfile()" >Search Profile</button>
+                    </div>
+              </div>
+            
+
+          </div>
+        </div>
+        <!-- /col-sm-6 -->
+      </div>
+      <!-- /row -->
+    </div>
+    <!-- /container -->
+  </div>
+
+</section>
+
+<div class="main-content">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-header" data-background-color="red">
+            <h4 class="title">Matched Profiles</h4>
+            <p class="category">Click on view profile to see the profiles</p>
+          </div>
+          <div class="card-content table-responsive">
+            <table class="table">
+              <thead class="text-danger">
+                <tr>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Email</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody *ngFor="let profile of profiles">
+                <tr>
+                  <td>{{profile.firstName}}</td>
+                  <td>{{profile.lastName}}</td>
+                  <td>{{profile.userId}}</td>
+                  <td class="text-primary">
+                    <a (click) = 'viewProfile(profile.userId)' >View Profile</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <div class="row" *ngFor="let feed of feeds">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header" data-background-color="blue">
+          <div class="ct-chart" id="feedBy">
+            <p>Posted BY {{feed.feedBy}} ....
+            </p>
+          </div>
+        </div>
+        <div class="card-content">
+          <h1>{{feed.feeTitle}}</h1>
+          <p class="category">{{feed.feedContent}}</p>
+          <div *ngIf="feed.isImage == 'Y'">
+            <img [src]="mediaUrl+feed.media" alt="Smiley face" width="200" height="100" />
+          </div>
+          <div *ngIf="feed.isVideo == 'Y'">
+            <video width="320" height="240" controls>
+              <source [src]="mediaUrl+feed.media" /> Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="stats">
+          <i class="material-icons"></i> {{feed.feedTime}}
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

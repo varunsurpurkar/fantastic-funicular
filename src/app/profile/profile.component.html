@@ -1,0 +1,91 @@
+<div class="main-content">
+    <div class="container-fluid">
+           <div class="row">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header" data-background-color="red">
+                        <h4 class="title">Edit Profile</h4>
+                        <p class="category">Complete your profile</p>
+                    </div>
+                    <div class="card-content">
+                        <form>
+                            <div class="row">
+                               <div class="col-md-6">
+                                    <label class="control-label">User Name(Email address)</label>
+                                    <div class="form-group form-black label-floating is-empty">
+                                        
+                                        <input type="email" class="form-control" [(ngModel)]="profileData.userId" name="userId" value="{{profileData.userId}}">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <div class="row">
+                                <div class="col-md-6">
+                                        <label class="control-label">First Name</label>
+                                    <div class="form-group form-black label-floating is-empty">
+                                        
+                                        <input type="text" class="form-control" [(ngModel)]="profileData.firstName" name="firstName" value="{{profileData.firstName}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                        <label class="control-label">Last Name</label>
+                                    <div class="form-group form-black label-floating is-empty">
+                                        
+                                        <input type="text" class="form-control"  [(ngModel)]="profileData.lastName" name="lastName" value="{{profileData.lastName}}">
+                                    </div>
+                                </div>
+                            </div>
+    
+                        
+                            <div class="row">
+                                <div class="col-md-4">
+                                        <label class="control-label">City</label>
+                                    <div class="form-group form-black label-floating is-empty">
+                                        
+                                        <input type="text" class="form-control"  [(ngModel)]="profileData.city" name="city" value="{{profileData.city}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                        <label class="control-label">Department</label>
+                                    <div class="form-group form-black label-floating is-empty">
+                                        
+                                        <input type="text" class="form-control"  [(ngModel)]="profileData.deparment" name="deparment" value="{{profileData.deparment}}">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                     <label class="control-label">Mobile No</label>
+                                    <div class="form-group form-black label-floating is-empty">
+                                       
+                                        <input type="text" class="form-control"  [(ngModel)]="profileData.mobileNo" name="mobileNo" value="{{profileData.mobileNo}}">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                        <label class="control-label">Password</label>
+                                    <div class="form-group form-black label-floating is-empty">
+                                        
+                                        <input type="password" class="form-control"  [(ngModel)]="profileData.password" name="password" value="{{profileData.password}}">
+                                    </div>
+                                </div>
+                             </div>   
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>About Me</label>
+                                        <div class="form-group form-black label-floating is-empty">
+                                            <textarea class="form-control" rows="5" [(ngModel)]="profileData.about" value="{{profileData.about}}" name="about"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <button type="submit" class="btn btn-danger pull-right" (click)="updateProfile()" >Update Profile</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+          </div>
+    </div>
+    </div>

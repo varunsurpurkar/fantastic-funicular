@@ -1,0 +1,32 @@
+<!-- Bootstrap Upload Control - START -->
+<div class="container">
+<div class="row">
+     <div class="col-md-4">     
+  <div class="form-group">
+  <label for="exampleFormControlTextarea1">Feed Title</label>
+    <textarea class="form-control" rows="5" name="title" [(ngModel)]="msgData.feeTitle"></textarea>
+  </div>
+  </div>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Feed Content</label>
+    <textarea class="form-control" rows="5" name="content" [(ngModel)]="msgData.feedContent"></textarea>
+  </div>
+
+  <div class="col-md-2">
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+             <input type="text" name="fileName" [(ngModel)]="msgData.media" placeholder="Attach File Name">
+            
+    </div>
+    <div class="col-md-2">
+      <span class="btn btn-success btn-sm active" role="button" (click)="sendFeed()">Share Feed</span>
+    </div>
+    <div class="col-md-2">
+      <span class="btn btn-danger btn-sm active" role="button" (click)="clearFeed()">Clear Feed</span>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,33 @@
+<section class="bg hero-bg ash-gradient dark-theme">
+        <div class="container">
+                <div class="row">
+                 <div class="col-sm-3">
+                  <span class="pull-left"><img [src]="mediaUrl+profilePic" alt="assets/img/users/11.jpg" class="thumb-lg img-circle"></span>
+                  <div class="media-body">
+                   <h4 class="m-t-5 m-b-5 ellipsis">{{profileData.firstName}}</h4>
+                   <p class="font-13"> {{profileData.deparment}}</p>
+                   <p class="text-muted"><small>{{profileData.city}}</small></p>
+                  </div><!-- /media-body -->
+                 </div><!-- /col-sm-6 -->
+                 <div class="col-sm-3">
+                     
+                 </div><!-- /col-sm-6 -->
+                 <div class="col-sm-6">
+                    <div class="card">
+                         <div class="card-body">
+                          <div class="card-block">
+                           <h4 class="card-title info">About</h4>
+                           <p class="card-text">{{profileData.about}}</p>
+                           <div class="text-left">
+                            <p class="card-text"><strong>Full Name :</strong> <span class="m-l-15">{{profileData.firstName}},{{profileData.lastName}}</span></p>
+                            <p class="card-text"><strong>Mobile :</strong><span class="m-l-15">{{profileData.mobileNo}}</span></p>
+                            <p class="card-text"><strong>Department :</strong> <span class="m-l-15">{{profileData.deparment}}</span></p>
+                            <p class="card-text"><strong>City :</strong> <span class="m-l-15">{{profileData.city}}</span></p>
+                           </div>			
+                          </div>
+                         </div>
+                        </div>		
+                 </div><!-- /col-sm-6 -->
+                </div><!-- /row -->
+             </div><!-- /container -->
+</section>

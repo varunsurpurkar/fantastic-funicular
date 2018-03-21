@@ -1,0 +1,48 @@
+NewsFeed :
+{
+        feedId:,
+        feedBy:,
+        feedTime:,
+        feeTitle:,
+        feedContent:,
+        media:,
+        isImage:,
+        isVideo:,
+}
+
+
+ShortUserProfile:
+{
+    fullName:,
+    Occupation:,
+    Department:,
+    College:
+    mediaLink:,
+}         
+
+Medium:{
+  about:
+  fullName:
+  mobile:
+}
+
+EditProfile
+
+{
+ firstName:,
+ lastName:,
+ userID:,
+ emailAddress:,
+ password:,
+
+}
+login
+{
+ userID:,
+ password:,
+
+}
+
+
+
+ 
